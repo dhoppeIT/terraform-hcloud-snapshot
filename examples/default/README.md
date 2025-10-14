@@ -3,6 +3,7 @@
 The configuration in this directory creates:
 
 * hcloud_snapshot
+* terraform_data
 
 ## Usage
 

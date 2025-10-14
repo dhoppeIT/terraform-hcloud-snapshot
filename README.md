@@ -3,6 +3,7 @@
 Terraform module to manage the following Hetzner Cloud resources:
 
 * hcloud_snapshot
+* terraform_data
 
 ## Usage
 
@@ -12,7 +13,7 @@ specify the required variables and run the command `terraform init`.
 ```hcl
 module "hcloud_server" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-hcloud-server/local"
-  version = "1.0.0"
+  version = "1.1.0"
 
   name        = "example-server"
   image       = "debian-13"
@@ -26,6 +27,9 @@ module "hcloud_snapshot" {
   version = "1.0.0"
 
   server_id = module.hcloud_server.id
+
+  description = "Snapshot managed by Terraform"
+  revision    = "1"
 }
 
 ```
@@ -43,6 +47,7 @@ module "hcloud_snapshot" {
 | Name | Version |
 |------|---------|
 | <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | ~> 1.0 |
+| <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
 
 ## Modules
 
@@ -53,6 +58,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [hcloud_snapshot.this](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/snapshot) | resource |
+| [terraform_data.replacement](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
 
 ## Inputs
 
@@ -60,6 +66,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_description"></a> [description](#input\_description) | Description of the snapshot | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | User-defined labels (key-value pairs) should be created with | `map(string)` | `{}` | no |
+| <a name="input_revision"></a> [revision](#input\_revision) | Revision of the snapshot | `string` | `null` | no |
 | <a name="input_server_id"></a> [server\_id](#input\_server\_id) | Server to the snapshot should be created from | `string` | n/a | yes |
 
 ## Outputs

@@ -14,3 +14,9 @@ variable "labels" {
   default     = {}
   description = "User-defined labels (key-value pairs) should be created with"
 }
+
+variable "revision" {
+  type        = string
+  default     = null
+  description = "Revision of the snapshot"
+}

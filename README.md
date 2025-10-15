@@ -24,7 +24,7 @@ module "hcloud_server" {
 
 module "hcloud_snapshot" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-hcloud-snapshot/local"
-  version = "1.0.0"
+  version = "1.1.0"
 
   server_id = module.hcloud_server.id
 

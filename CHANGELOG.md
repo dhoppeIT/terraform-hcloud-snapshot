@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1](https://gitlab.com/terraform-child-modules-48151/terraform-hcloud-snapshot/compare/v1.1.0...v1.1.1) (2025-10-19)
+
+### Bug Fixes
+
+* **terraform:** Protect sensitive input variables ([f739778](https://gitlab.com/terraform-child-modules-48151/terraform-hcloud-snapshot/commit/f7397789d338cf94f74da6278394d11441eb8b05))
+
 ## [1.1.0](https://gitlab.com/terraform-child-modules-48151/terraform-hcloud-snapshot/compare/v1.0.0...v1.1.0) (2025-10-14)
 
 ### Features
